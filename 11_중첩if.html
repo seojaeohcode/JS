@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        var id = "aabb";
+        var pw = "12345678";
+
+        // 사용자 입력하는 변수선언
+        var user_id = prompt("아이디는? ", "");
+        var user_pw = prompt("비밀번호는? ", "");
+
+        if(id==user_id){
+            if(pw==user_pw){
+                document.write(user_id+"님 환영합니다.");
+            }
+            else{
+                alert("아이디 또는 비밀번호가 틀립니다.");
+                location.reload();//F5 키와 같이 새로고침
+            }
+        }
+        else{
+            alert("아이디 또는 비밀번호가 틀립니다.");
+            location.reload();
+        }
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>

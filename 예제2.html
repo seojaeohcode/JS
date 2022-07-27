@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script>
+        var name = prompt("당신의 이름은?", "");
+        var pay1 = prompt("당신의 교통비는?", "0");
+        var pay2 = prompt("당신의 식비는?", "0");
+        var pay3 = prompt("당신의 음료비는?", "0");
+
+        var result = Number(pay1)+Number(pay2)+Number(pay3);
+
+        (result>10000)?document.write(`지출비용이 ${result-10000}원 초과했습니다.`):document.write(`돈 관리 잘했어요!`);
+    </script>
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
