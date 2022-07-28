@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+    </style>
+    <script>
+        // for (let i = 1; i <= 3; i++) {
+        //     for (let j = 1; j <= 2; j++) {
+        //         document.write(`${i}행 ${j}열 <br>`);
+        //     }
+        //     document.write(`<br>`);
+        // }
+
+        // 구구단
+        // for (let i = 1; i <= 9; i++) {
+        // document.write(`${i}단------------------ <br>`);
+        //     for (let j = 1; j <= 9; j++) {
+        //         document.write(`${i} * ${j} = ${i*j} <br>`);
+        //     }
+        // document.write(`<br>`);
+        // }
+
+        // 별찍기
+        let b = "";
+        // // 직각삼각형
+        // for (let i = 1; i <= 10; i++) {
+        //     for (let j = 1; j <= i; j++) {
+        //         a+=`*`
+        //     }
+        //     a+=`\n`
+        // }
+        // alert(a);
+        // a = "";
+
+        // // 다이아몬드
+        // for (let i = 1; i <= 5; i++) {
+        //     //43210
+        //     for (let j = 1; j <= 5 - i; j++) {
+        //         a += ` `;
+        //     }
+        //     //1(2-1) 3(4-1) 5(6-1) 7 9
+        //     for (let j = 1; j <= 2 * i - 1; j++) {
+        //         a += `*`;
+        //     }
+        //     a += `\n`;
+        // }
+        // for (let k = 1; k <= 4; k++) {
+        //     for (let l = 1; l <= k; l++) {
+        //         a += ` `;
+        //     }
+
+        //     for (let repeat = 9-2*c; repeat>0; repeat--) {
+        //         a += `*`;
+        //     }
+        //     c++;
+        //     a += `\n`;
+        // }
+        // alert(a);
+        // a = "";
+
+        // 모래시계
+        let a = "";
+        let c = 1;
+        
+        for (let k = 1; k <= 4; k++) {
+            for (let l = 1; l <= k; l++) {
+                a += ` `;
+            }
+            for (let repeat = 9-2*c; repeat>0; repeat--) {
+                a += `*`;
+            }
+            c++;
+            a += `\n`;
+        }
+        
+        for (let i = 2; i <= 4; i++) {
+            //43210
+            for (let j = 1; j <= 5 - i; j++) {
+                a += ` `;
+            }
+            //1(2-1) 3(4-1) 5(6-1) 7 9
+            for (let j = 1; j <= 2 * i - 1; j++) {
+                a += `*`;
+            }
+            a += `\n`;
+        }
+        alert(a);
+    </script>
+    <title>스타일시트 적용</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
