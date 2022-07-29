@@ -7,9 +7,9 @@
         var clear = true;
         // 답지설정
         var numArr = [-1, -1, -1, -1];
-        var report = [];
+        var report = [`위치와 숫자 모두 동일 = 스트라이크`,`위치는 다르나 숫자가 동일 = 볼`,`입력된 숫자가 정답에 없다 = 아웃\n`];
         var i = 0;
-        let repeat = 1;
+        let repeat = 0;
 
         // 답지초기화
         var answer = [0, 0, 0, 0];
@@ -33,7 +33,7 @@
         }
 
         // 체크용
-        // alert(`${numArr}`);
+        alert(`${numArr}`);
 
         while (clear) {
             // 답지입력
@@ -71,7 +71,7 @@
             repeat++;
         }
 
-        document.write(`<h1> 정답:${numArr} 축하합니다! </h1>`);
+        document.write(`<h1> 정답:${numArr.join('')} </h1> <h1> 축하합니다! ${repeat}회차만에 맞추셨습니다! </h1>`);
     </script>
     <title>Document</title>
 </head>
