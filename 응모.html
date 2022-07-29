@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        div{
+            background: #eee;
+            border: 1px solid #000;
+            height: fit-content;
+            padding: 10px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        h1{
+            margin: 0;
+        }
+    </style>
+    <script>
+        var participant = Number(prompt("전체 응모자 수:"),0);
+        var winner = Math.floor((Math.random() * (participant-1))+1);
+        document.write(`<div> <h1> 당첨자 발표 </h1> </div>`);
+        document.write(`전체 응모자 수: ${participant}명 <br>`);
+        document.write(`당첨자: ${winner}번`);
+    </script>
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+</html>
