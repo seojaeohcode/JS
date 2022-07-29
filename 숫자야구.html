@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script>
+        var clear = true;
+        // 답지설정
+        var numArr = [-1, -1, -1, -1];
+        var report = [];
+        var i = 0;
+        let repeat = 1;
+
+        // 답지초기화
+        var answer = [0, 0, 0, 0];
+        var strike = 0;
+        var ball = 0;
+        var out = 0;
+
+        // 중복없이 숫자뽑기
+        while (i < 4) {
+            numArr[i] = Math.floor((Math.random() * 9));
+
+            for (let j = 0; j < 4; j++) {
+                if (i != j) {
+                    while (numArr[i] == numArr[j]) {
+                        numArr[i] = Math.floor((Math.random() * 9));
+                    }
+                }
+            }
+
+            i++;
+        }
+
+        // 체크용
+        // alert(`${numArr}`);
+
+        while (clear) {
+            // 답지입력
+            for (let i = 0; i < answer.length; i++) {
+                answer[i] = Number(prompt(`범위: 0~9 (중복숫자는 없습니다.)\n${i + 1}번째 숫자를 입력해주세요.`, 0));
+            }
+            // 정답체크
+            // 답지 수만큼 돌림 4 -> 정답입력 한 것을 각 칸 모두 체크 4 = 16번 
+            for (let i = 0; i < 4; i++) {
+                for (let j = 0; j < 4; j++) {
+                    if (numArr[j] === answer[i] && i === j) {
+                        strike++;
+                    }
+                    else if (numArr[j] === answer[i] && i !== j) {
+                        ball++;
+                    }
+                }
+            }
+            out = 4 - strike - ball;
+
+            if (strike === 4) {
+                clear = false;
+            }
+
+            if (strike !== 4) {
+                // alert(`${repeat}회차: ${strike}스트라이크, ${ball}볼, ${out}아웃`);
+                report.push(`${repeat}회차: ${strike}스트라이크, ${ball}볼, ${out}아웃`);
+                alert(report.join("\n"));
+            }
+
+            // 초기화
+            strike = 0;
+            ball = 0;
+            out = 0;
+            repeat++;
+        }
+
+        document.write(`<h1> 정답:${numArr} 축하합니다! </h1>`);
+    </script>
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>

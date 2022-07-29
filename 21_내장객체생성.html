@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script>
+        // 내장객체 생성 new+초록색글자
+        // var tv = new Object();
+        // tv.color = "red";
+        // tv.price = 300000;
+        // tv.info = function () {
+        //     document.write(`tv 색상 ${this.color} <br>`);
+        //     document.write(`tv 가격 ${this.price} <br>`);
+        // }
+        // document.write(`<h1>tv 객체 메서드 호출</h1>`);
+        // tv.info();
+
+        // var car = new Object();
+        // car.color = "black";
+        // car.price = 100;
+        // car.info = function() {
+        //     document.write(`car 색상 ${this.color} <br>`);
+        //     document.write(`car 가격 ${this.price} <br>`);
+        // }
+        // document.write(`<h1>car 객체 메서드 호출</h1>`);
+        // car.info();
+
+        // 리터럴 방식
+        // var car = {
+        //     color: "black",
+        //     price: 1000,
+        //     info: function() {
+        //         document.write(`car 색상 ${this.color} <br>`);
+        //         document.write(`car 가격 ${this.price} <br>`);
+        //     }
+        // }
+        // document.write(`<h1>car 객체 메서드 호출</h1>`);
+        // car.info();
+
+        // 계산기
+        var firstNum = Number(prompt("1번째 숫자를 입력하세요", 0));
+        var secondNum = Number(prompt("2번째 숫자를 입력하세요", 0));
+
+        var calculator = {
+            color: "black",
+            price: 1000,
+            brand: "casio",
+            info: function () {
+                document.write(`calculator 색상 ${this.color} <br>`);
+                document.write(`calculator 가격 ${this.price} <br>`);
+                document.write(`calculator 브랜드 ${this.brand} <br>`);
+            },
+            add: function (numberOne, numberTwo) {
+                document.write(`계산결과: ${numberOne+numberTwo} <br>`);
+            },
+            distract: function (numberOne, numberTwo) {
+                document.write(`계산결과: ${numberOne-numberTwo} <br>`);
+            },
+            multiple: function (numberOne, numberTwo) {
+                document.write(`계산결과: ${numberOne*numberTwo} <br>`);
+            },
+            division: function (numberOne, numberTwo) {
+                document.write(`계산결과: ${numberOne/numberTwo} <br>`);
+            }
+        }
+
+        calculator.info();
+        calculator.add(firstNum, secondNum);
+        calculator.distract(firstNum, secondNum);
+        calculator.multiple(firstNum, secondNum);
+        calculator.division(firstNum, secondNum);
+
+    </script>
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 객체 속성 메서드... -->
+</body>
+
+</html>
