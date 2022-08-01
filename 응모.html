@@ -20,6 +20,8 @@
     <script>
         var participant = Number(prompt("전체 응모자 수:"),0);
         var winner = Math.floor((Math.random() * (participant-1))+1);
+        // 0~1 * -1 = -1~0
+        document.write(`${Math.ceil(0)}`);
         document.write(`<div> <h1> 당첨자 발표 </h1> </div>`);
         document.write(`전체 응모자 수: ${participant}명 <br>`);
         document.write(`당첨자: ${winner}번`);

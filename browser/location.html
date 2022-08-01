@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        #container {
+            width: 550px;
+            margin: 10px auto;
+        }
+
+        #display {
+            margin-top: 15px;
+            padding: 10px;
+            border: solid 1px #333;
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="container">
+        <h2>location</h2>
+        <div id="display">
+            <script>
+                document.write("<p><b>location.href : </b>"+location.href+"</p>");
+                document.write("<p><b>location.href : </b>"+location.host+"</p>");
+                document.write("<p><b>location.href : </b>"+location.protocol+"</p>");
+            </script>
+        </div>
+        <button onclick="location.replace('https://www.daum.net/')">다음 홈페이지로 이동</button>
+    </div>
+</body>
+
+</html>

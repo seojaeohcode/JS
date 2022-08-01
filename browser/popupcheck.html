@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script>
+        var blocked = false;
+        function openPop() {
+            var newWin = window.open("notice.html", "pop", "width=500, height=400");
+            if (newWin == null) {
+                alert("팝업을 해제해주세요.");
+            }
+        }
+            // if (window.open()) {
+            //     window.open("notice.html", "pop", "width=500, height=400");
+            // } else {
+            //     alert("팝업을 해제해주세요.");
+            // }
+    </script>
+    <title>Document</title>
+</head>
+
+<body onload="openPop()">
+    <P>문서를 열면 팝업창이 표시됩니다.</P>
+</body>
+
+</html>
