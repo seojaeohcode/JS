@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #wrap{
+            width: 500px;
+            height: 500px;
+            background: yellowgreen;
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <button onClick="myFnc()">Try it</button>
+    <div id="wrap">
+        <h1>Hello</h1>
+    </div>
+
+    <script>
+        function myFnc() {
+            let style = document.getElementById("wrap");
+            let color = ["yellowgreen","red","blue"];
+            i = Math.floor(Math.random()*(color.length));
+            console.log(i);
+            style.style.backgroundColor = color[i];
+        }
+    </script>
+</body>
+
+</html>

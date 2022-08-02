@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        let addNum = 0;
+        let subNum = 100;
+
+        // let auto_1 = setInterval(
+        //     function() {
+        //         addNum++;
+        //         console.log(`addNum : ${addNum}번 째`);
+        //     },3000
+        // );
+
+        // let auto_2 = setInterval(
+        //     function() {
+        //         subNum--;
+        //         console.log(`subNum : ${subNum}번 째`);
+        //     },3000
+        // );
+
+        let auto_to = setTimeout(() => {
+            console.log("1초 후에 실행됩니다.");
+        }, 1000);
+
+        let auto_si = setInterval(
+            function () {
+                addNum++;
+                console.log(`1초마다 실행됩니다. (${addNum}번 째)`);
+            }, 1000
+        );
+        // 1초 = 1000 1분 = 6000 1시간 = 360000 6시간 = (360000*9) 
+        // 9시 시작=>6시 끝(9시간) 
+        let time = new Date();
+
+        if (time.getHours === 6) {
+            window.open();
+            document.write('아침 비콘');
+
+            let bicon = setTimeout(() => {
+                document.write('저녁 비콘');
+            }, (360000 * 9));
+        }
+    </script>
+    <title>Document</title>
+</head>
+
+<body>
+    <button onClick="clearInterval(auto_si)">정지</button>
+    <!-- <button onClick="clearInterval(auto_2)">감소정지</button> -->
+</body>
+
+</html>

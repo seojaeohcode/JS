@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        // function addNumber(num1, num2) {
+        //     var sum = num1 + num2;
+        //     return sum
+        // }
+
+        // var result = addNumber(15,24);
+        // document.write(`두 수를 더한 값: ${result}`);
+
+        // function getNumber() {
+        //     var firstNum = Number(prompt("1번째 숫자를 입력하세요", 0));
+        //     var secondNum = Number(prompt("2번째 숫자를 입력하세요", 0));
+        //     return firstNum+secondNum;
+        // }
+
+        // function printNumber() {
+        //     var sum = getNumber();
+        //     alert(`결과값: ${sum}`);
+        // }
+
+        // printNumber();
+        
+        function name(...items) {
+            
+        }
+
+        // 가변 매개변수
+        function earnings(name, wage=9160, hours=40) {
+            document.write(`# ${name} 님의 급여 정보 <br>`);
+            document.write(`-시급: ${wage}원<br>`);
+            document.write(`-근무 시간: ${hours}<br>`);
+            document.write(`-급여: ${wage*hours}<br><br>`);
+        }
+
+        earnings("구름");
+        earnings("별", 10000);
+        earnings("인성", 10000, 52);
+    </script>
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
