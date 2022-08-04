@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<script>
+		// title밑에 작성하면 에러 없이 오류남.
+	</script>
+	<title>DOM에 접근하기</title>
+</head>
+
+<body>
+	<div id="container">
+		<img src="" alt="잔" id="cup">
+	</div>
+</body>
+
+</html>
+
+<script>
+	// let cup = document.querySelector("#cup");
+	// cup.onclick = function() {
+	// 	alert("이미지를 클릭했습니다.");
+	// }
+	let cup = document.querySelector("#cup");
+	// cup.src = "images/cup-1.png"
+	// console.log(cup.src);
+
+	// cup.onclick = function changePic(){
+	// 	cup.src = "./images/cup-2.png";
+	// }
+
+	cup.onclick = function(event) {
+		
+	}
+
+</script>

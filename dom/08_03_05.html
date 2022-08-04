@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>DOM에 접근하기</title>
+</head>
+
+<body>
+	<h1></h1>
+	<!-- <div id="container">
+		<img src="./images/cup-1.png" alt="잔" id="cup">
+	</div> -->
+
+	<script>
+		// let cup = document.querySelector('#cup');
+
+		// cup.onclick = function(event) {
+		// 	// this.src / array[i]
+		// 	alert("이벤트 유형: "+event.type+", 이벤트 발생 위치: "+event.pageX+","+event.pageY);
+		// 	alert("이미지 경로: "+this.src);
+		// }
+		let h1 = document.querySelector('h1');
+		h1.textContent = 'HEADERS';
+		h1.style.color = 'white'; 
+		h1.style.backgroundColor = 'black';
+		h1.style.fontSize = "100px";
+		h1.style.padding = "30px";
+	</script>
+</body>
+
+</html>

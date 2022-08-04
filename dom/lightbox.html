@@ -1,24 +1,68 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
-    <title>라이트박스</title>
-    <link rel="stylesheet" href="css/lightbox.css">
-  </head>
-  <body>
-    <div class="row">
-      <ul>
-        <li><img src="images/tree-1-thumb.jpg" data-src="images/tree-1.jpg" class="pic"></li>
-        <li><img src="images/tree-2-thumb.jpg" data-src="images/tree-2.jpg" class="pic"></li>
-        <li><img src="images/tree-3-thumb.jpg" data-src="images/tree-3.jpg" class="pic"></li> 
-        <li><img src="images/tree-4-thumb.jpg" data-src="images/tree-4.jpg" class="pic"></li>
-        <li><img src="images/tree-5-thumb.jpg" data-src="images/tree-5.jpg" class="pic"></li>
-        <li><img src="images/tree-6-thumb.jpg" data-src="images/tree-6.jpg" class="pic"></li>          
-      </ul>    
-    </div>
-    <div id="lightbox">
-			<img src="images/tree-1.jpg" alt="" id="lightboxImage">			
-    </div>
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>라이트박스</title>
+  <link rel="stylesheet" href="css/lightbox.css">
+</head>
+
+<body>
+  <div class="row">
+    <ul>
+      <li><img src="images/tree-1-thumb.jpg" data-src="images/tree-1.jpg" class="pic"></li>
+      <li><img src="images/tree-2-thumb.jpg" data-src="images/tree-2.jpg" class="pic"></li>
+      <li><img src="images/tree-3-thumb.jpg" data-src="images/tree-3.jpg" class="pic"></li>
+      <li><img src="images/tree-4-thumb.jpg" data-src="images/tree-4.jpg" class="pic"></li>
+      <li><img src="images/tree-5-thumb.jpg" data-src="images/tree-5.jpg" class="pic"></li>
+      <li><img src="images/tree-6-thumb.jpg" data-src="images/tree-6.jpg" class="pic"></li>
+    </ul>
+  </div>
+  <div id="lightbox">
+    <img src="images/tree-1.jpg" alt="" id="lightboxImage">
+  </div>
+</body>
+<script>
+  let images = document.querySelectorAll('li img')
+  let lightbox = document.querySelector('#lightbox');
+  let lightboxImage = document.querySelector('#lightboxImage');
+  let on = false;
+
+  console.log(images);
+
+  function revealImg(src) {
+      lightbox.style.display = 'block';
+      lightboxImage.src = src;
+  }
+
+  function hideImg() {
+    lightbox.style.display = 'none';
+  }
+
+  images[0].addEventListener("mouseover",
+    function () { revealImg("images/tree-1.jpg"); }, false);
+  images[0].addEventListener("mouseout", hideImg, false);
+
+  images[1].addEventListener("mouseover",
+    function () { revealImg("images/tree-2.jpg"); }, false);
+  images[1].addEventListener("mouseout", hideImg, false);
+
+  images[2].addEventListener("mouseover",
+    function () { revealImg("images/tree-3.jpg"); }, false);
+  images[2].addEventListener("mouseout", hideImg, false);
+
+  images[3].addEventListener("mouseover",
+    function () { revealImg("images/tree-4.jpg"); }, false);
+  images[3].addEventListener("mouseout", hideImg, false);
+
+  images[4].addEventListener("mouseover",
+    function () { revealImg("images/tree-5.jpg"); }, false);
+  images[4].addEventListener("mouseout", hideImg, false);
+
+  images[5].addEventListener("mouseover",
+    function () { revealImg("images/tree-6.jpg"); }, false);
+  images[5].addEventListener("mouseout", hideImg, false);
+</script>
+
 </html>

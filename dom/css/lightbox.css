@@ -13,10 +13,10 @@
 				
         /* 라이트 박스 스타일 */
         #lightbox {
-          position: fixed;  /* 위치 고정 */
+          position:static;  /* 위치 고정 */
           width:100%;  /* 너비 */
           height:100%;  /* 높이 */
-          background-color:rgba(0,0,0,0.7);  /* 배경색 */
+          /* background-color:rgba(0,0,0,0.7);  배경색 */
           top:0;  /* 시작 위치 - 위쪽 끝 */
           left:0; /* 시작 위치 - 왼쪽 끝 */
           display:none;  /* 화면에서 감추기 */

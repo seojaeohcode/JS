@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<script>
+		// title밑에 작성하면 에러 없이 오류남.
+	</script>
+	<title>DOM에 접근하기</title>
+</head>
+
+<body>
+	<button onclick="inText()">innerText</button>
+	<button onclick="inHtml()">innerHtml</button>
+	<div id='current'></div>
+
+	<script>
+		const now = new Date();
+
+		function inText() {
+			document.getElementById('current').innerText = "<em>" + now + "</em>";
+		}
+		function inHtml() {
+			document.getElementById('current').innerHTML = "<em>" + now + "</em>";
+		}
+	</script>
+</body>
+
+</html>
