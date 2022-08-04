@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            width: 100%;
+            height: 100%;
+            background-color: lightgray;
+        }
+
+        #wrap {
+            width: 300px;
+            height: 300px;
+            background-color: white;
+            display: block;
+            position: relative;
+            margin: 100px 0 0 100px;
+            border: 1px double springgreen;
+            border-radius: 5px;
+        }
+
+        h1 {
+            padding-top: 30px;
+            padding-left: 20px;
+        }
+
+        ul {
+            margin-left: 10px;
+        }
+
+        button {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+        }
+
+        .flip-card {
+            background-color: transparent;
+            width: 300px;
+            height: 200px;
+            border: 1px solid #f1f1f1;
+            perspective: 1000px;
+            /* Remove this if you don't want the 3D effect */
+        }
+
+        /* This container is needed to position the front and back side */
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+
+        /* Do an horizontal flip when you move the mouse over the flip box container */
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        /* Position the front and back side */
+        .flip-card-front,
+        .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            /* Safari */
+            backface-visibility: hidden;
+        }
+
+        /* Style the front side (fallback if image is missing) */
+        .flip-card-front {
+            background-color: #bbb;
+            color: black;
+        }
+
+        /* Style the back side */
+        .flip-card-back {
+            background-color: dodgerblue;
+            color: white;
+            transform: rotateY(180deg);
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        문서를 열면 팝업 창이 표시됩니다.
+    </div>
+    <div id="wrap">
+        <h1>공지사항</h1>
+        <ul>
+            <li>공지사항 내용</li>
+            <li>공지사항 내용</li>
+            <li>공지사항 내용</li>
+            <li>공지사항 내용</li>
+            <li>공지사항 내용</li>
+        </ul>
+        <button>닫기</button>
+    </div>
+
+    <!-- <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <img src="./images/tree-1.jpg" alt="Avatar" style="width:300px;height:300px;">
+            </div>
+            <div class="flip-card-back">
+                <h1>John Doe</h1>
+                <p>Architect & Engineer</p>
+                <p>We love that guy</p>
+            </div>
+        </div>
+    </div> -->
+
+
+    <script>
+        const button = document.querySelector('button');
+        const pop = document.querySelector('#wrap');
+
+        button.onclick = function () {
+            pop.style.display = 'none';
+            setTimeout(() => {
+                pop.style.display = 'block';
+            }, 4000);
+        }
+    </script>
+</body>
+
+</html>

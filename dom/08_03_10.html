@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="zoomIn()">확대</button>
+    <button onclick="zoomOut()">축소</button>
+    <button onclick="chColor()">색상변경</button>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam convallis ligula velit, non facilisis diam
+        eleifend id. Cras semper rutrum nisi, ac eleifend lacus maximus id. Aenean faucibus justo non molestie vehicula.
+        Donec eleifend sollicitudin tortor, eu condimentum dui gravida eget. Nam facilisis consectetur quam. Interdum et
+        malesuada fames ac ante ipsum primis in faucibus. Maecenas elementum massa ac ipsum posuere elementum.
+        Pellentesque malesuada ullamcorper velit, eu convallis lacus vulputate eget. Suspendisse nulla erat, mattis id
+        dolor id, lacinia suscipit turpis. Nunc pretium leo non rutrum eleifend. Quisque augue quam, vehicula id lectus
+        venenatis, mattis euismod est.
+    </p>
+    <script>
+        let num = 16;
+        let body = document.querySelector('body');
+        let p = document.querySelector('body p');
+        const color = ["red", "blue", "green"];
+        let i = 0;
+
+        function zoomIn(){
+            num++;
+
+            let body = document.querySelector('body');
+            body.style.fontSize = num+'px';
+        }
+
+        function zoomOut(){
+            if(num>10){
+                num--;
+                body.style.fontSize = num+'px';
+            }
+        }
+
+        function chColor(){
+            // i = Math.floor(Math.random()*color.length);
+
+            if(i == color.length-1){
+                i = 0;
+            }else{
+                i++;
+            }
+            p.style.color = color[i];
+        }
+    </script>
+</body>
+
+</html>
