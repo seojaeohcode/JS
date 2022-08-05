@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        html,body{
+            margin: 0;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let txtTag = document.createElement('h1');
+        let txtNode = document.createTextNode('문서 객체 동적으로 생성하기');
+        
+        txtTag.style.color = 'white';
+        txtTag.style.backgroundColor = 'black';
+        txtTag.style.margin = 0;
+        txtTag.style.padding = '10px';
+        // txtTag.setAttribute("color", "white");
+        // txtTag.setAttribute("backgroundColor", "black");
+        
+        txtTag.appendChild(txtNode);
+        
+        document.body.appendChild(txtTag);
+    </script>
+</body>
+</html>

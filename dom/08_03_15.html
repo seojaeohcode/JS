@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>DOM에 접근하기</title>
+</head>
+<body>
+	<ul>
+		<li>HTML</li>
+		<li>CSS3</li>
+		<li id="target">JAVA</li>
+	</ul>
+
+	<button onclick="callAdd(); this.onclick='';">appendChild</button>
+	<button onclick="callDel(); this.onclick='';">removeChild</button>
+	<button onclick="callBefore();">insertBefore</button>
+	<button onclick="callAfter();">insertAfter</button>
+
+	<script>
+		function callAdd() {
+			let li = document.createElement('li');
+			let text = document.createTextNode('Django');
+
+			li.appendChild(text);
+
+			document.getElementById('target').appendChild(li);
+		}
+		function callDel(){
+			let target = document.querySelectorAll('li')[0];
+			target.parentNode.removeChild(target);
+		}
+		function callBefore() {
+			let li = document.createElement('li');
+			let text = document.createTextNode('jQuery');
+
+			li.appendChild(text);
+			// target = id / id.firstChild => 해당 아이디를 가진 아이중에 퍼스트
+			document.querySelector('#target').insertBefore(li, target.firstChild);
+		}
+		function callAfter() {
+			let li = document.createElement('li');
+			let text = document.createTextNode('javascript');
+
+			li.appendChild(text);
+			document.querySelector('#target').after(li);
+		}
+	</script>
+</body>
+</html>
