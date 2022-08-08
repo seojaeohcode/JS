@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<title> 이벤트 </title>
+	<script src="./js.js"></script>
+	<script>
+		$(function () {
+				$(document).ready(function () {
+					var h1 = $('.img1').height();
+					console.log("ready :", h1);
+				});
+				// function() {
+				// 	$(window).load(function () {
+				// 		var h2 = $('.img1').height();
+				// 		console.log("load : ", h2)
+				// 	})
+				// }
+			});
+	</script>
+</head>
+
+<body>
+	<p>
+		<!-- 배경색 / 글자색 -->
+		<img src="http://placehold.co/600X400/ff0000/ffffff" class="img1">
+	</p>
+</body>
+
+</html>
