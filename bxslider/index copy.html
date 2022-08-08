@@ -1,0 +1,85 @@
+<html>
+
+<head>
+
+    <link rel="stylesheet" href="./css/jquery.bxslider copy.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            var slider = $('.slider').bxSlider({
+                auto: true,
+                pause:2000,
+                mode: 'fade', //vertical/horizon/fade
+            });
+            $('.btn1').on('click',function () {
+                console.log('stop');
+                slider.stopAuto();
+            });
+            $('.btn2').on('click',function () {
+                console.log('start');
+                slider.startAuto();
+            });
+        });
+
+    </script>
+    <style>
+        ul {
+            margin: 0;
+        }
+
+        .slider li {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: inherit;
+            left: 0;
+        }
+
+        .slider li img {
+            padding: 0;
+            width: inherit;
+            height: 100%;
+        }
+
+        #text {
+            color: springgreen;
+            font-size: 10vw;
+            background-color: black;
+            text-shadow:
+                /* White glow */
+                0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff,
+                /* Green glow */
+                0 0 25px rgb(166, 84, 254), 0 0 25px rgb(166, 84, 254), 0 0 25px rgb(166, 84, 254), 0 0 25px rgb(166, 84, 254), 0 0 25px rgb(166, 84, 254);
+            text-align: center;
+        }
+        button{
+            background-color: skyblue;
+            border: 0;
+            border-radius: 5px;
+            width: 6vw;
+            height: 4vw;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <ul class="slider">
+            <li><img src="img/photo/p1.jpg" alt="풍경"></li>
+            <li><img src="img/photo/p2.jpg" alt="풍경"></li>
+            <li><img src="img/photo/p3.jpg" alt="풍경"></li>
+            <li><img src="img/photo/p4.jpg" alt="풍경"></li>
+            <li><img src="img/photo/p5.jpg" alt="풍경"></li>
+        </ul>
+        <button class="btn1">Stop!</button>
+        <button class="btn2">Go!</button>
+        <div id="text">MY SlideShow!</div>
+    </div>
+</body>
+
+</html>
