@@ -6,7 +6,21 @@
 <script src="./js.js"></script>
 <script>
 $(function(){
-	
+	$('#btn1').on({
+		'mouseover':function() {
+			$('.txt').text('javascript');
+		},
+	});
+	$('#btn2').on({
+		'mouseover':function() {
+			$('.txt').text('welcome!');
+		},
+	});
+	$('#btn1, #btn2').on({
+		'mouseout':function() {
+			$('.txt').empty();
+		},
+	});
 });
 </script>
 </head>
